@@ -1,0 +1,28 @@
+{
+  "name": "quill-sandbox",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "sass": "^1.80.3",
+    "shadow-cljs": "^2.28.18",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-quill": "^2.0.0"
+  },
+  "scripts": {
+    "shadow:watch": "shadow-cljs watch app",
+    "shadow:release": "shadow-cljs release app",
+    "tailwind:build": "tailwindcss -i ./src/css/app.css -o ./public/app.css",
+    "tailwind:watch": "tailwindcss -i ./src/css/app.css -o ./public/app.css --watch",
+    "tailwind:release": "tailwindcss -o ./public/app.css --minify",
+    "ts:build": "tsc",
+    "ts:watch": "tsc --watch",
+    "start": "yarn tailwind:watch & yarn ts:watch & yarn shadow:watch"
+  }
+}
