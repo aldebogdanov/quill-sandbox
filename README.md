@@ -1,10 +1,10 @@
 #### Concept Demonstrator of Simple Notes with Quill Editor in ClojureScript with Datascript in-memory Database
 
 ##### Preparation
-`yarn install` or `npm install`
+`yarn install`
 
 ##### Start
-`yarn start` or `npm tailwind:watch & npm ts:watch & npm shadow:watch`
+`yarn start`
 
 ##### Usage
 [http://localhost:3000](http://localhost:3000)

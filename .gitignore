@@ -25,3 +25,5 @@ public/app.js
 public/app.css
 yarn.lock
 package-lock.json
+public/cljs-runtime/
+public/manifest.edn
