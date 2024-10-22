@@ -23,6 +23,6 @@
     "tailwind:release": "tailwindcss -o ./public/app.css --minify",
     "ts:build": "tsc",
     "ts:watch": "tsc --watch",
-    "start": "yarn tailwind:watch & yarn ts:watch & yarn shadow:watch"
+    "start": "yarn tailwindcss:watch & yarn ts:watch & yarn shadow:watch"
   }
 }
