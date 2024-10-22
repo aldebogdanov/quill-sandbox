@@ -56,9 +56,10 @@
   [id]
   (reset! selected-id id)
   (js/console.log "Loading note:" id)
-  (let [note (d/pull @conn '[*] id)]
+  (let [note (d/pull @conn '[*] id)
+        ^js/ReactQuill quill @quill-ref]
     (js/console.log "Loaded note:" note)
-    (some-> @quill-ref .-editor (.setContents (:note/contents note)))
+    (some-> quill .-editor (.setContents (:note/contents note)))
     (reset! note-name (:note/name note))))
 
 
@@ -120,7 +121,7 @@
 (defn app
   []
   [:div.container.text-center.m-auto.px-6
-   [:h1.mt-10.text-center "Quill Sandbox"]
+   [:h1.text-2xl.font-bold.mt-10.text-center "Quill Sandbox"]
    [:hr.my-2]
    [:div.container.flex.h-screen
     [:div.bg-gray-10.p-4 {:class "w-1/4 lg:w-1/3"}
